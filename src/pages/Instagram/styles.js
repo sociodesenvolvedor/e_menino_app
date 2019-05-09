@@ -5,6 +5,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     flex: 1,
+    backgroundColor: '#FFFFFF',
   },
   titleLoading: {
     fontSize: 15,

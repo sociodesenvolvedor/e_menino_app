@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { Component } from 'react';
+import CodePush from 'react-native-code-push';
 
 import '~/config/ReactotronConfig';
 
@@ -7,10 +8,18 @@ import store from './store';
 
 import Routes from '~/routes';
 
-const App = () => (
-  <Provider store={store}>
-    <Routes />
-  </Provider>
-);
+class App extends Component {
+  componentWillUnmount() {}
 
-export default App;
+  render() {
+    return (
+      <Provider store={store}>
+        <Routes />
+      </Provider>
+    );
+  }
+}
+
+export default CodePush({
+  checkFrequency: CodePush.CheckFrequency.ON_APP_RESUME,
+})(App);

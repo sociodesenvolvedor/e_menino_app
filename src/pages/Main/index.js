@@ -26,6 +26,10 @@ class Main extends Component {
     }, 1000);
   }
 
+  componentWillUnmount() {
+    this.setState({ internet: false, loading: true });
+  }
+
   CheckConnectivity = () => {
     // For Android devices
     if (Platform.OS === 'android') {
