@@ -116,7 +116,7 @@ android {
     }
 
     defaultConfig {
-        applicationId "com.sociodesenvolvedor.emenino"
+        applicationId "com.lojamenino"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1
