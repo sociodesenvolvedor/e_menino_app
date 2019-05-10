@@ -13,6 +13,7 @@ class App extends Component {
   constructor(properties) {
     super(properties);
     OneSignal.init('6fb2a5b6-ae5c-46ea-ae76-461cc97c0f58');
+    OneSignal.registerForPushNotifications();
 
     OneSignal.addEventListener('received', this.onReceived);
     OneSignal.addEventListener('opened', this.onOpened);
